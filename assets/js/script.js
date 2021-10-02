@@ -34,9 +34,39 @@ var dropDown = document.getElementById("favoriteMovies");
 
 
 
-var genres = ["Horror", "Comedy", "Rom Com"]
+var genres = ["Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy", "History", "Horror", "Music", "Mystery", "Romance", "Science Fiction", "TV Movie", "Thriller", "War", "Western"]
 
 for(var i = 0; i < genres.length; i++) {
-    dropDown.dropDown
+    var opt = genres[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    dropDown.appendChild(el);
 
 }
+
+
+
+
+
+
+// MOVIE
+// name: Action          id: 28
+// name: Adventure       id: 12
+// name: Animation       id: 16
+// name: Comedy          id: 35
+// name: Crime           id: 80
+// name: Documentary     id:  99
+// name: Drama           id: 18
+// name: Family          id: 10751
+// name: Fantasy         id: 14
+// name: History         id: 36
+// name: Horror          id: 27
+// name: Music           id: 10402
+// name: Mystery         id: 9648
+// name: Romance         id: 10749
+// name: Science Fiction id: 878
+// name: TV Movie        id: 10770
+// name: Thriller        id: 53
+// name: War             id: 10752
+// name: Western         id: 37
