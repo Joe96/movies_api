@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/reset.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Movie Advisor</title>
+  </head>
+    <body>
+      <header class="navbar-fixed" id="navbarContainer">
+        <nav id="navbar">
+          <div class="nav-wrapper valign-wrapper">
+            
+            <ul id="navButtons" class="left">
+    
+              <!-- Back to results page -->
+              <li id="backToResultsButton"><a>Back to Search Results</a></li>
+    
+                        
+            </ul>
+          </div>
+        </nav>
+      </header>
+     
+      <main>
+        <!-- Div that displays top 3 pics -->
+      <div class="container" id="movieContainer">
+        <div class="row center-align valign-wrapper" id="MoviePicBanner" style="width: 100%;">
+          <div class="col s12 l3 center-align" id="Movie0" sytle="width:33%">
+            <img  class="responsive-img" id="mveImg0" alt="Coming Soon...!!!" onclick="populateDetails(this)">
+          </div>
+          <div class="col s12 l3 center-align" id="Movie1"  sytle="width:33%">
+            <img  class="responsive-img" id="mveImg1" alt="Coming Soon...!!!" onclick="populateDetails(this)">
+          </div>
+          <div class="col s12 l3 center-align" id="Movie2"  sytle="width:33%">
+            <img  class="responsive-img" id="mveImg2" alt="Coming Soon...!!!" onclick="populateDetails(this)">
+          </div>
+
+       </div> 
+    </div>
+      <!-- Div to display content of the Movie.-->
+      <div class="col s12 l8 left-align center" id="infoColumn">
+          <p  id="Title" style="text-align: left;">Title : </p>
+          <p  id="description" style="text-align: left;"> About : </p><br>
+          <p  id="Popularity" style="text-align: left;"> Rating : </p><br>
+          <p  id="ReleaseDate" style="text-align: left;"> Released On : </p><br>
+           
+        </div>
+      </div>
+    </main>
+  
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script type="text/javascript" src="./assets/js/script1.js"></script>
+  </body>
+
+</html>

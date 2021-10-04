@@ -1,4 +1,5 @@
 
+
 subBtn.addEventListener("click", function(e) {
     email = document.querySelector("#email").value;
     username = document.querySelector("#username").value;
@@ -11,23 +12,33 @@ function updateStorage(){
     localStorage.setItem("username", username);
 }
 
-// MOVIE
-// name: Action          id: 28
-// name: Adventure       id: 12
-// name: Animation       id: 16
-// name: Comedy          id: 35
-// name: Crime           id: 80
-// name: Documentary     id:  99
-// name: Drama           id: 18
-// name: Family          id: 10751
-// name: Fantasy         id: 14
-// name: History         id: 36
-// name: Horror          id: 27
-// name: Music           id: 10402
-// name: Mystery         id: 9648
-// name: Romance         id: 10749
-// name: Science Fiction id: 878
-// name: TV Movie        id: 10770
-// name: Thriller        id: 53
-// name: War             id: 10752
-// name: Western         id: 37
+const apiKey = "64dc8221474533792ea48b35c977b47c";
+function getPopMovies(genre){
+ 
+//fetching url 
+    var requestUrl = `https://api.themoviedb.org/3/discover/movie?&api_key=64dc8221474533792ea48b35c977b47c&with_genres=${genre}`
+    fetch(requestUrl)
+    .then(function(response){
+        response.json().then(function (data) {
+          console.log(data);
+          if(data != ""){
+            localStorage.clear();
+
+            localStorage.setItem("movieList",JSON.stringify(data));
+  
+            window.location="./index1.html";
+          }else{
+             alert("Please ")
+          }
+         
+        
+        });
+    })
+
+    
+  }
+
+  $("#favoriteMovies").change(function(){
+    //alert($("#favoriteMovies").val());
+      getPopMovies($("#favoriteMovies").val());
+  });
