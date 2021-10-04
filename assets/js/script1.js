@@ -1,17 +1,5 @@
 var movieDetails;
 
-subBtn.addEventListener("click", function(e) {
-    email = document.querySelector("#email").value;
-    username = document.querySelector("#username").value;
-    e.preventDefault();
-    updateStorage();
-})
-
-function updateStorage(){
-    localStorage.setItem("email", email);
-    localStorage.setItem("username", username);
-}
-
 //getting data from local storage
 $( document ).ready(function() {
     console.log( "ready!   I am in 2nd page" );
