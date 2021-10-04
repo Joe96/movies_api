@@ -28,4 +28,3 @@ function getPopMovies(genre){
     //alert($("#favoriteMovies").val());
       getPopMovies($("#favoriteMovies").val());
   });
-
