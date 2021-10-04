@@ -12,8 +12,7 @@
 
 */
 
-
-
+// var subBtn = document.getElementById("emailBtn");
 var button = document.createElement("button");
 button.innerHTML = "Submit";
 
@@ -24,32 +23,43 @@ body.appendChild(button);
 button.style.marginTop = "40px";
 button.style.padding = "3px";
 
+var username;
+var email;
+
+
 button.addEventListener ("click", function(event) {
     location.href = "./index2.html";
     console.log(event);
 });
 
+// subBtn.addEventListener("click", function(e) {
+//     email = document.querySelector("#email").value;
+//     username = document.querySelector("#username").value;
+//     e.preventDefault();
+//     updateStorage();
+// })
 
-var dropDown = document.getElementById("favoriteMovies");
+// function updateStorage(){
+//     localStorage.setItem("email", email);
+//     localStorage.setItem("username", username);
+// }
 
-var genreId = [28, 12, 16, 35, 80, 99, 18, 10751, 14, 36, 27, 10402, 9648, 10749, 878, 10770, 53, 10752, 37]
 
-var genres = ["Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy", "History", "Horror", "Music", "Mystery", "Romance", "Science Fiction", "TV Movie", "Thriller", "War", "Western"]
 
-for(var i = 0; i < genres.length; i++) {
-    var opt = genres[i];
-    var el = document.createElement("option");
-    el.textContent = opt;
-    el.value = opt;
-    dropDown.appendChild(el);
 
+const apiKey = "64dc8221474533792ea48b35c977b47c";
+var genre = "27"
+function getPopMovies(){
+    var requestUrl = `https://api.themoviedb.org/3/discover/movie?&api_key=64dc8221474533792ea48b35c977b47c&with_genres=${genre}`
+    fetch(requestUrl)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data)
+    });
 }
-
-console.log(genreId.length);
-console.log(genres.length);
-
-
-
+getPopMovies();
 
 // MOVIE
 // name: Action          id: 28
