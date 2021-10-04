@@ -28,3 +28,15 @@ function getPopMovies(genre){
     //alert($("#favoriteMovies").val());
       getPopMovies($("#favoriteMovies").val());
   });
+
+subBtn.addEventListener("click", function(e) {
+    email = document.querySelector("#email").value;
+    username = document.querySelector("#username").value;
+    e.preventDefault();
+    updateStorage();
+})
+
+function updateStorage(){
+    localStorage.setItem("email", email);
+    localStorage.setItem("username", username);
+}
