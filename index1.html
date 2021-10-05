@@ -26,39 +26,32 @@
     <title>Movie Advisor</title>
   </head>
     <body>
-      <header class="jumbotron">
-          <h1 class="display-3">The Movie App</h1>
-          <p class="lead">A simple app to find your new favorite movie.</p>
-      </header>
-      <div class="container">
-        <p>What's your favorite genre of movie?</p>   
-
-        <select id ='favoriteMovies'>  
-         
-        </select>
-
-          <table class="card-body table mx-auto my-4">
-            <tbody id="repo-table" class="mx-auto text-center"></tbody>
-          </table>  
-          
-      </div>
+      <header class="navbar-fixed" id="navbarContainer">
         
-         <footer>
-       <form>
-                <h4>Join the email club!</h4>
-              <label>Email</label>
-              <input id="email" type="text" email="email" placeholder="Your email" />
-              <label>Name</label>
-              <input id="username" type="text" name="name" placeholder="Your name" />
+        <nav id="navbar">
+          <div class="nav-wrapper valign-wrapper">
+            <ul id="navButtons" class="left">
+                  <!-- Back to results page -->
+              <li id="backToResultsButton"><a>Back to Search Results</a></li>                    
+            </ul>
+          </div>
+        </nav>
+      </header>
+     
+      <main>
+        <!-- Div that displays top 3 pics -->
+      <div class="container" id="movieContainer">
+        <div class="row center-align valign-wrapper" id="MoviePicBanner" style="width: 100%;">
+           
 
-              <button id="emailBtn">Enter</button>
-            </form>
-    </footer>
-
+       </div> 
+    </div>
+    
+      
+    </main>
+  
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-      <script type="text/javascript" src="./assets/js/script.js"></script>
+      <script type="text/javascript" src="./assets/js/script1.js"></script>
   </body>
 
 </html>
-
