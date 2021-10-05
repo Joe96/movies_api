@@ -1,39 +1,23 @@
-var movieDetails;
+//Getting movielist from local storage
+var movieDetails = JSON.parse(localStorage.getItem("movielist"));
+console.log(movieDetails);
+populateMovies(movieDetails) 
+//Populate movies from movielist
+function populateMovies(movieDetails) {
+  //  $("#MoviePicBanner").empty()
+for(var i=0;i<3;i++){
+   $("#MoviePicBanner").append(`
+    <div class="col s12 l3 center-align" id="Movie0" sytle="width:33%">
+          
+   <!-- Div to display content of the Movie.-->
+<div class="col s12 l8 left-align center" id="infoColumn">
+<p  id="title" style="text-align: left;">Title :${movieDetails[i].original_title} </p>
+<p  id="description" style="text-align: left;"> About :${movieDetails[i].overview} </p><br>
+<p  id="popularity" style="text-align: left;"> Rating :${movieDetails[i].popularity} </p><br>
+<p  id="releaseDate" style="text-align: left;"> Released On :${movieDetails[i].release_date} </p><br>
 
-//getting data from local storage
-$( document ).ready(function() {
-    console.log( "ready!   I am in 2nd page" );
-    movieDetails = JSON.parse(localStorage.getItem("movieList"));
-    console.log(movieDetails);
-    populateMovies(movieDetails);
-});
-
-//populating banners
-var bannerImg = "https://image.tmdb.org/t/p/w300";
-function populateMovies(movieList){
-    console.log("movieList "+ movieList);
-    for(var i=0; i<3; i++){
-      console.log(bannerImg + movieList.results[i].poster_path);
-      $('#mveImg'+i).attr('src', bannerImg+movieList.results[i].poster_path);
-      $('#mveImg'+i).attr('alt', movieList.results[i].original_title);
-    }
-
-        $('#Title').append(movieList.results[0].original_title);
-        $('#description').append(movieList.results[0].overview);
-        $('#Popularity').append(movieList.results[0].popularity);
-        $('#ReleaseDate').append(movieList.results[0].release_date);
-    
-  }
-
-  //populating details of populated banners
-  function populateDetails(idx){
-   
-
-    var idVal = idx.id.substring(idx.id.length,idx.id.length-1);
-
-        $('#Title').append(movieDetails.results[idVal].original_title);
-        $('#description').append(movieDetails.results[idVal].overview);
-        $('#Popularity').append(movieDetails.results[idVal].popularity);
-        $('#ReleaseDate').append(movieDetails.results[idVal].release_date);
-
-  }
+<img src ="https://image.tmdb.org/t/p/w300/${movieDetails[i].poster_path}"  class="responsive-img" id="movie0" alt="Coming Soon...!!!"/>
+</div>
+</div> `)
+ 
+}
