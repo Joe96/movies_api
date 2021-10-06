@@ -20,5 +20,7 @@ function populateMovies(movieDetails) {
     </div>
     </div>
     </div> `)
-  }
+  }}
 }
+
+$("#backToResultsButton").css({padding: "5px"});
