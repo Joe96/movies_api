@@ -12,10 +12,10 @@ function populateMovies(movieDetails) {
       <img src ="https://image.tmdb.org/t/p/w300/${movieDetails[i].poster_path}"  class="responsive-img" id="movie0" alt="Coming Soon...!!!"/>
     <div class="description">
     <div class="description">
-      <p  id="title" >Title :${movieDetails[i].original_title} </p>
-      <p  id="description"> About :${movieDetails[i].overview} </p><br>
-      <p  id="popularity"> Rating :${movieDetails[i].vote_average} </p><br>
-      <p  id="releaseDate"> Released On :${movieDetails[i].release_date} </p><br>
+      <p  id="title" >Title: ${movieDetails[i].original_title} </p>
+      <p  id="description"> About: ${movieDetails[i].overview} </p><br>
+      <p  id="popularity"> Rating: ${movieDetails[i].vote_average} </p><br>
+      <p  id="releaseDate"> Released On: ${movieDetails[i].release_date} </p><br>
     </div>
     </div>
     </div> `)

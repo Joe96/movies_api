@@ -6,7 +6,7 @@ body {
     font-family: 'poppins', sans-serif;
     margin: 0;
     color : white;
-    background-image: url('./image/moviebackgroung.jpg');
+    background-image: url('./images/moviebackground.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -18,7 +18,7 @@ body {
     color: red;
     border-radius: 0;
     /*border-bottom: 10px solid black;*/
-    background-image: url('./image/moviebackgroung.jpg');
+    background-image: url('./image/moviebackground.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -29,7 +29,7 @@ body {
 }
 
 .container {
-    color:red;
+    color: white;
     text-align: center;
     font-weight: bold;
     font-size: larger;
@@ -67,8 +67,9 @@ footer {
 .description {
     background-color: black;
     margin-top: 10%;
+
 }
 
-.description {
+.description p {
     text-align: left;
 }
