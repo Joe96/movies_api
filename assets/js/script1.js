@@ -21,6 +21,6 @@ function populateMovies(movieDetails) {
     </div>
     </div> `)
   }}
-}
+
 
 $("#backToResultsButton").css({padding: "5px"});
