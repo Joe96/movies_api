@@ -3,9 +3,10 @@
 }
 
 body {
-    font-family: 'poppins', sans-serif;
-    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
     color : white;
+    text-shadow: 4px 4px 2px black, 4px 4px 2px black, 4px 4px 2px  black, 4px 4px 2px black;
     background-image: url('./images/moviebackground.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -18,27 +19,50 @@ body {
     color: red;
     border-radius: 0;
     /*border-bottom: 10px solid black;*/
-    background-image: url('./image/moviebackground.jpg');
+    background-image: url('./images/moviebackground.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    
+}
+
+#title {
+    color: white;
+    
+}
+
+#description {
+    color: gold;
 }
 
 .jumbotron p{
     color: white;
+    text-shadow: 4px 4px 2px black, 4px 4px 2px black, 4px 4px 2px  black, 4px 4px 2px black;
+    margin-top :0;
 }
 
 .container {
     color: white;
+    text-shadow: 4px 4px 2px black, 4px 4px 2px black, 4px 4px 2px  black, 4px 4px 2px black;
     text-align: center;
     font-weight: bold;
     font-size: larger;
 } 
 
+.container p {
+    color:red;
+    font-weight : bolder;
+}
+
 .container1 {
     color: red;
     padding-left: 20px;
     font-weight: bold;
+}
+
+.container1 h4 {
+    color:red;
+    font-weight: bolder;
 }
 
 .form-group {
@@ -67,9 +91,11 @@ footer {
 .description {
     background-color: black;
     margin-top: 10%;
+    text-align: left;
+    padding: 10px;
 
 }
 
-.description p {
-    text-align: left;
+.container {
+    margin-top: 5%;
 }
